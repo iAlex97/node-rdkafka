@@ -1,0 +1,188 @@
+ok 12 invalid message header
+{ severity: 7, fac: 'CONSUME' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Enqueue 1 message(s) (4099 bytes, 1 ops) on test [0] fetch queue (qlen 0, v4, last_offset 10515, 0 ctrl msgs, 0 aborted msgsets, uncompressed)
+{ severity: 7, fac: 'FETCH' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Fetch topic test [0] at offset 10516 (v4)
+{ severity: 7, fac: 'FETCH' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Fetch 1/1/1 toppar(s)
+{ severity: 7, fac: 'SEND' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Sent FetchRequest (v11, 94 bytes @ 0, CorrId 9)
+{ severity: 7, fac: 'BROADCAST' } [thrd:localhost:9092/bootstrap]: Broadcasting state change
+{ severity: 7, fac: 'RECV' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Received FetchResponse (v11, 66 bytes, CorrId 9, rtt 1001.12ms)
+{ severity: 7, fac: 'FETCH' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Topic test [0] MessageSet size 0, error "Success", MaxOffset 10516, LSO 10516, Ver 4/4
+{ severity: 7, fac: 'FETCH' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Fetch topic test [0] at offset 10516 (v4)
+{ severity: 7, fac: 'FETCH' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Fetch 1/1/1 toppar(s)
+{ severity: 7, fac: 'CLOSE' } [thrd:app]: Closing consumer
+{ severity: 7, fac: 'CLOSE' } [thrd:app]: Waiting for close events
+{ severity: 7, fac: 'SEND' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Sent FetchRequest (v11, 94 bytes @ 0, CorrId 10)
+{ severity: 7, fac: 'BROADCAST' } [thrd:localhost:9092/bootstrap]: Broadcasting state change
+{ severity: 7, fac: 'CGRPOP' } [thrd:main]: Group "kafka-mocha-grp-3c28dccd1edc8f45b58c2bbcd38f624d7b2eac03" received op TERMINATE in state up (join-state steady)
+{ severity: 7, fac: 'CGRPTERM' } [thrd:main]: Terminating group "kafka-mocha-grp-3c28dccd1edc8f45b58c2bbcd38f624d7b2eac03" in state up with 1 partition(s)
+{ severity: 7, fac: 'UNSUBSCRIBE' } [thrd:main]: Group "kafka-mocha-grp-3c28dccd1edc8f45b58c2bbcd38f624d7b2eac03": unsubscribe from current subscription of size 1 (leave group=true, has joined=true, rdkafka-9eb52c4d-ab40-4cbb-9408-0a7af1179a82, join-state steady)
+{ severity: 7, fac: 'SUBSCRIPTION' } [thrd:main]: Group "kafka-mocha-grp-3c28dccd1edc8f45b58c2bbcd38f624d7b2eac03": clearing subscribed topics list (1)
+{ severity: 7, fac: 'SUBSCRIPTION' } [thrd:main]: Group "kafka-mocha-grp-3c28dccd1edc8f45b58c2bbcd38f624d7b2eac03": effective subscription list changed from 1 to 0 topic(s):
+{ severity: 7, fac: 'GRPLEADER' } [thrd:main]: Group "kafka-mocha-grp-3c28dccd1edc8f45b58c2bbcd38f624d7b2eac03": resetting group leader info: unsubscribe
+{ severity: 7, fac: 'REBALANCE' } [thrd:main]: Group "kafka-mocha-grp-3c28dccd1edc8f45b58c2bbcd38f624d7b2eac03" initiating rebalance (EAGER) in state up (join-state steady) with 1 assigned partition(s): unsubscribe
+{ severity: 7, fac: 'CGRPJOINSTATE' } [thrd:main]: Group "kafka-mocha-grp-3c28dccd1edc8f45b58c2bbcd38f624d7b2eac03" changed join state steady -> wait-unassign-call (state up)
+{ severity: 7, fac: 'CLEARASSIGN' } [thrd:main]: Clearing current assignment of 1 partition(s)
+{ severity: 7, fac: 'CGRPJOINSTATE' } [thrd:main]: Group "kafka-mocha-grp-3c28dccd1edc8f45b58c2bbcd38f624d7b2eac03" changed join state wait-unassign-call -> wait-unassign-to-complete (state up)
+{ severity: 7, fac: 'DUMP' } [thrd:main]: Assignment dump (started_cnt=1, wait_stop_cnt=0)
+{ severity: 7, fac: 'DUMP_ALL' } [thrd:main]: List with 0 partition(s):
+{ severity: 7, fac: 'DUMP_PND' } [thrd:main]: List with 0 partition(s):
+{ severity: 7, fac: 'DUMP_QRY' } [thrd:main]: List with 0 partition(s):
+{ severity: 7, fac: 'DUMP_REM' } [thrd:main]: List with 1 partition(s):
+{ severity: 7, fac: 'DUMP_REM' } [thrd:main]:  test [0] offset STORED
+{ severity: 7, fac: 'BARRIER' } [thrd:main]: test [0]: rd_kafka_toppar_op_fetch_stop:2363: new version barrier v5
+{ severity: 7, fac: 'CONSUMER' } [thrd:main]: Stop consuming test [0] (v5)
+{ severity: 7, fac: 'BARRIER' } [thrd:main]: test [0]: rd_kafka_toppar_op_pause_resume:2424: new version barrier v6
+{ severity: 7, fac: 'RESUME' } [thrd:main]: Resume test [0] (v6)
+{ severity: 7, fac: 'DESP' } [thrd:main]: Removing (un)desired topic test [0]
+{ severity: 7, fac: 'REMOVE' } [thrd:main]: Removing test [0] from assignment (started=true, pending=false, queried=false, stored offset=10516)
+{ severity: 7, fac: 'REMOVE' } [thrd:main]: Served 1 removed partition(s), with 1 offset(s) to commit
+{ severity: 7, fac: 'ASSIGNMENT' } [thrd:main]: Current assignment of 0 partition(s) with 0 pending adds, 0 offset queries, 1 partitions awaiting stop and 0 offset commits in progress
+{ severity: 7, fac: 'ASSIGNMENT' } [thrd:main]: Group "kafka-mocha-grp-3c28dccd1edc8f45b58c2bbcd38f624d7b2eac03": clearing group assignment
+{ severity: 7, fac: 'CLEARASSIGN' } [thrd:main]: No current assignment to clear
+{ severity: 7, fac: 'DUMP' } [thrd:main]: Assignment dump (started_cnt=1, wait_stop_cnt=1)
+{ severity: 7, fac: 'DUMP_ALL' } [thrd:main]: List with 0 partition(s):
+{ severity: 7, fac: 'DUMP_PND' } [thrd:main]: List with 0 partition(s):
+{ severity: 7, fac: 'DUMP_QRY' } [thrd:main]: List with 0 partition(s):
+{ severity: 7, fac: 'DUMP_REM' } [thrd:main]: List with 0 partition(s):
+{ severity: 7, fac: 'ASSIGNMENT' } [thrd:main]: Current assignment of 0 partition(s) with 0 pending adds, 0 offset queries, 1 partitions awaiting stop and 0 offset commits in progress
+{ severity: 7, fac: 'CGRPTERM' } [thrd:main]: Group "kafka-mocha-grp-3c28dccd1edc8f45b58c2bbcd38f624d7b2eac03": waiting for 1 toppar(s), assignment in progress, 0 commit(s) (state up, join-state wait-unassign-to-complete) before terminating
+{ severity: 7, fac: 'CGRPTERM' } [thrd:main]: Group "kafka-mocha-grp-3c28dccd1edc8f45b58c2bbcd38f624d7b2eac03": waiting for 1 toppar(s), assignment in progress, 0 commit(s) (state up, join-state wait-unassign-to-complete) before terminating
+{ severity: 7, fac: 'OP' } [thrd:main]: test [0] received op FETCH_STOP (v5) in fetch-state active (opv4)
+{ severity: 7, fac: 'FETCH' } [thrd:main]: Stopping fetch for test [0] in state active (v5)
+{ severity: 7, fac: 'PARTSTATE' } [thrd:main]: Partition test [0] changed fetch state active -> stopping
+{ severity: 7, fac: 'STORETERM' } [thrd:main]: test [0]: offset store terminating
+{ severity: 7, fac: 'PARTSTATE' } [thrd:main]: Partition test [0] changed fetch state stopping -> stopped
+{ severity: 7, fac: 'OP' } [thrd:main]: test [0] received op PAUSE (v6) in fetch-state stopped (opv5)
+{ severity: 7, fac: 'RESUME' } [thrd:main]: Not resuming test [0]: partition is not paused by library
+{ severity: 7, fac: 'CGRPTERM' } [thrd:main]: Group "kafka-mocha-grp-3c28dccd1edc8f45b58c2bbcd38f624d7b2eac03": waiting for 1 toppar(s), assignment in progress, 0 commit(s) (state up, join-state wait-unassign-to-complete) before terminating
+{ severity: 7, fac: 'CGRPOP' } [thrd:main]: Group "kafka-mocha-grp-3c28dccd1edc8f45b58c2bbcd38f624d7b2eac03" received op PARTITION_LEAVE in state up (join-state wait-unassign-to-complete) for test [0]
+{ severity: 7, fac: 'PARTDEL' } [thrd:main]: Group "kafka-mocha-grp-3c28dccd1edc8f45b58c2bbcd38f624d7b2eac03": delete test [0]
+{ severity: 7, fac: 'CGRPTERM' } [thrd:main]: Group "kafka-mocha-grp-3c28dccd1edc8f45b58c2bbcd38f624d7b2eac03": waiting for 0 toppar(s), assignment in progress, 0 commit(s) (state up, join-state wait-unassign-to-complete) before terminating
+{ severity: 7, fac: 'STOPSERVE' } [thrd:main]: All partitions awaiting stop are now stopped: serving assignment
+{ severity: 7, fac: 'DUMP' } [thrd:main]: Assignment dump (started_cnt=0, wait_stop_cnt=0)
+{ severity: 7, fac: 'DUMP_ALL' } [thrd:main]: List with 0 partition(s):
+{ severity: 7, fac: 'DUMP_PND' } [thrd:main]: List with 0 partition(s):
+{ severity: 7, fac: 'DUMP_QRY' } [thrd:main]: List with 0 partition(s):
+{ severity: 7, fac: 'DUMP_REM' } [thrd:main]: List with 0 partition(s):
+{ severity: 7, fac: 'ASSIGNDONE' } [thrd:main]: Group "kafka-mocha-grp-3c28dccd1edc8f45b58c2bbcd38f624d7b2eac03": assignment operations done in join-state wait-unassign-to-complete (rebalance rejoin=false)
+{ severity: 7, fac: 'UNASSIGN' } [thrd:main]: Group "kafka-mocha-grp-3c28dccd1edc8f45b58c2bbcd38f624d7b2eac03": unassign done in state up (join-state wait-unassign-to-complete)
+{ severity: 7, fac: 'MEMBERID' } [thrd:main]: Group "kafka-mocha-grp-3c28dccd1edc8f45b58c2bbcd38f624d7b2eac03": updating member id "rdkafka-9eb52c4d-ab40-4cbb-9408-0a7af1179a82" -> ""
+{ severity: 7, fac: 'LEAVE' } [thrd:main]: Group "kafka-mocha-grp-3c28dccd1edc8f45b58c2bbcd38f624d7b2eac03": leave (in state up)
+{ severity: 7, fac: 'LEAVE' } [thrd:main]: localhost:9092/1: Leaving group
+{ severity: 7, fac: 'NOREJOIN' } [thrd:main]: Group "kafka-mocha-grp-3c28dccd1edc8f45b58c2bbcd38f624d7b2eac03": Not rejoining group without an assignment: Unassignment done: no subscribed topics
+{ severity: 7, fac: 'CGRPJOINSTATE' } [thrd:main]: Group "kafka-mocha-grp-3c28dccd1edc8f45b58c2bbcd38f624d7b2eac03" changed join state wait-unassign-to-complete -> init (state up)
+{ severity: 7, fac: 'CGRPTERM' } [thrd:main]: Group "kafka-mocha-grp-3c28dccd1edc8f45b58c2bbcd38f624d7b2eac03": waiting for 0 toppar(s), 0 commit(s), wait-leave, (state up, join-state init) before terminating
+{ severity: 7, fac: 'SEND' } [thrd:GroupCoordinator]: GroupCoordinator/1: Sent LeaveGroupRequest (v1, 125 bytes @ 0, CorrId 9)
+{ severity: 7, fac: 'RECV' } [thrd:GroupCoordinator]: GroupCoordinator/1: Received LeaveGroupResponse (v1, 6 bytes, CorrId 9, rtt 10.89ms)
+{ severity: 7, fac: 'LEAVEGROUP' } [thrd:main]: LeaveGroup response received in state up
+{ severity: 7, fac: 'CGRPSTATE' } [thrd:main]: Group "kafka-mocha-grp-3c28dccd1edc8f45b58c2bbcd38f624d7b2eac03" changed state up -> term (join-state init)
+{ severity: 7, fac: 'BROADCAST' } [thrd:main]: Broadcasting state change
+{ severity: 7, fac: 'ASSIGNMENT' } [thrd:main]: Group "kafka-mocha-grp-3c28dccd1edc8f45b58c2bbcd38f624d7b2eac03": clearing group assignment
+{ severity: 7, fac: 'COORDCLEAR' } [thrd:main]: Group "kafka-mocha-grp-3c28dccd1edc8f45b58c2bbcd38f624d7b2eac03" broker localhost:9092/1 is no longer coordinator
+{ severity: 7, fac: 'NODENAME' } [thrd:main]: GroupCoordinator/1: Broker nodename changed from "localhost:9092" to ""
+{ severity: 7, fac: 'NODEID' } [thrd:main]: GroupCoordinator/1: Broker nodeid changed from 1 to -1
+{ severity: 7, fac: 'CGRPTERM' } [thrd:main]: Consumer group sub-system terminated (will enqueue reply)
+{ severity: 7, fac: 'CLOSE' } [thrd:app]: Consumer closed
+{ severity: 7, fac: 'DESTROY' } [thrd:app]: Terminating instance (destroy flags NoConsumerClose (0x8))
+{ severity: 7, fac: 'TERMINATE' } [thrd:app]: Terminating consumer group handler
+{ severity: 7, fac: 'FAIL' } [thrd:GroupCoordinator]: GroupCoordinator: Closing connection due to nodename change (after 3052ms in state UP) (_TRANSPORT)
+{ severity: 7, fac: 'STATE' } [thrd:GroupCoordinator]: GroupCoordinator: Broker changed state UP -> DOWN
+{ severity: 7, fac: 'BROADCAST' } [thrd:GroupCoordinator]: Broadcasting state change
+{ severity: 7, fac: 'BUFQ' } [thrd:GroupCoordinator]: GroupCoordinator: Purging bufq with 0 buffers
+{ severity: 7, fac: 'BUFQ' } [thrd:GroupCoordinator]: GroupCoordinator: Purging bufq with 0 buffers
+{ severity: 7, fac: 'BUFQ' } [thrd:GroupCoordinator]: GroupCoordinator: Updating 0 buffers on connection reset
+{ severity: 7, fac: 'BRKTERM' } [thrd:GroupCoordinator]: GroupCoordinator: terminating: broker still has 4 refcnt(s), 0 buffer(s), 0 partition(s)
+{ severity: 7, fac: 'METADATA' } [thrd:GroupCoordinator]: Requesting metadata for 1/1 topics: broker down
+{ severity: 7, fac: 'METADATA' } [thrd:GroupCoordinator]: localhost:9092/1: Request metadata for 1 topic(s): broker down
+{ severity: 7, fac: 'TERMINATE' } [thrd:GroupCoordinator]: GroupCoordinator: Handle is terminating in state DOWN: 4 refcnts (0x105051da0), 0 toppar(s), 0 active toppar(s), 0 outbufs, 0 waitresps, 0 retrybufs: failed 0 request(s) in retry+outbuf
+{ severity: 7, fac: 'STATE' } [thrd:GroupCoordinator]: GroupCoordinator: Broker changed state DOWN -> INIT
+{ severity: 7, fac: 'BROADCAST' } [thrd:GroupCoordinator]: Broadcasting state change
+{ severity: 7, fac: 'TERMINATE' } [thrd:main]: Internal main thread terminating
+{ severity: 7, fac: 'DESTROY' } [thrd:main]: Destroy internal
+{ severity: 7, fac: 'BROADCAST' } [thrd:main]: Broadcasting state change
+{ severity: 7, fac: 'TERMINATE' } [thrd:app]: Interrupting timers
+{ severity: 7, fac: 'TERMINATE' } [thrd:app]: Sending TERMINATE to internal main thread
+{ severity: 7, fac: 'TERMINATE' } [thrd:app]: Joining internal main thread
+{ severity: 7, fac: 'DESTROY' } [thrd:main]: Removing all topics
+{ severity: 7, fac: 'PARTCNT' } [thrd:main]: Topic test partition count changed from 1 to 0
+{ severity: 7, fac: 'REMOVE' } [thrd:main]: test [0] no longer reported in metadata
+{ severity: 7, fac: 'BRKMIGR' } [thrd:main]: test [0] 0x10404c600 sending final LEAVE for removal by localhost:9092/1
+{ severity: 7, fac: 'TOPPARREMOVE' } [thrd:main]: Removing toppar test [-1] 0x104018000
+{ severity: 7, fac: 'DESTROY' } [thrd:main]: test [-1]: 0x104018000 DESTROY_FINAL
+{ severity: 7, fac: 'DESTROY' } [thrd:main]: Sending TERMINATE to localhost:9092/1
+{ severity: 7, fac: 'DESTROY' } [thrd:main]: Sending TERMINATE to GroupCoordinator
+{ severity: 7, fac: 'TERMINATE' } [thrd:main]: Purging reply queue
+{ severity: 7, fac: 'TERMINATE' } [thrd:main]: Decommissioning internal broker
+{ severity: 7, fac: 'TERMINATE' } [thrd:main]: Join 3 broker thread(s)
+{ severity: 7, fac: 'FETCH' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Topic test [0] in state stopped at offset 10515 (0/100000 msgs, 0/65536 kb queued, opv 4) is not fetchable: forced removal
+{ severity: 7, fac: 'FETCHADD' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Removed test [0] from fetch list (0 entries, opv 4): forced removal
+{ severity: 7, fac: 'TOPBRK' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Topic test [0]: leaving broker (0 messages in xmitq, next broker (none), rktp 0x10404c600)
+{ severity: 7, fac: 'TOPBRK' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Topic test [0]: no next broker, failing 0 message(s) in partition queue
+{ severity: 7, fac: 'BROADCAST' } [thrd:localhost:9092/bootstrap]: Broadcasting state change
+{ severity: 7, fac: 'TERM' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Received TERMINATE op in state UP: 5 refcnts, 0 toppar(s), 0 active toppar(s), 1 outbufs, 1 waitresps, 0 retrybufs
+{ severity: 7, fac: 'TERM' } [thrd:GroupCoordinator]: GroupCoordinator: Received TERMINATE op in state INIT: 2 refcnts, 0 toppar(s), 0 active toppar(s), 0 outbufs, 0 waitresps, 0 retrybufs
+{ severity: 7, fac: 'FAIL' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Client is terminating (after 3058ms in state UP) (_DESTROY)
+{ severity: 7, fac: 'STATE' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Broker changed state UP -> DOWN
+{ severity: 7, fac: 'BROADCAST' } [thrd:localhost:9092/bootstrap]: Broadcasting state change
+{ severity: 7, fac: 'BUFQ' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Purging bufq with 1 buffers
+{ severity: 7, fac: 'FAIL' } [thrd:GroupCoordinator]: GroupCoordinator: Client is terminating (after 0ms in state INIT) (_DESTROY)
+{ severity: 7, fac: 'BUFQ' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Purging bufq with 1 buffers
+{ severity: 7, fac: 'STATE' } [thrd:GroupCoordinator]: GroupCoordinator: Broker changed state INIT -> DOWN
+{ severity: 7, fac: 'BUFQ' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Updating 0 buffers on connection reset
+{ severity: 7, fac: 'BROADCAST' } [thrd:GroupCoordinator]: Broadcasting state change
+{ severity: 7, fac: 'BRKTERM' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: terminating: broker still has 3 refcnt(s), 0 buffer(s), 0 partition(s)
+{ severity: 7, fac: 'BUFQ' } [thrd:GroupCoordinator]: GroupCoordinator: Purging bufq with 0 buffers
+{ severity: 7, fac: 'TERMINATE' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Handle is terminating in state DOWN: 2 refcnts (0x1048617a0), 0 toppar(s), 0 active toppar(s), 0 outbufs, 0 waitresps, 0 retrybufs: failed 0 request(s) in retry+outbuf
+{ severity: 7, fac: 'STATE' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Broker changed state DOWN -> INIT
+{ severity: 7, fac: 'BROADCAST' } [thrd:localhost:9092/bootstrap]: Broadcasting state change
+{ severity: 7, fac: 'BUFQ' } [thrd:GroupCoordinator]: GroupCoordinator: Purging bufq with 0 buffers
+{ severity: 7, fac: 'BUFQ' } [thrd:GroupCoordinator]: GroupCoordinator: Updating 0 buffers on connection reset
+{ severity: 7, fac: 'BRKTERM' } [thrd:GroupCoordinator]: GroupCoordinator: terminating: broker still has 2 refcnt(s), 0 buffer(s), 0 partition(s)
+{ severity: 7, fac: 'TERMINATE' } [thrd:GroupCoordinator]: GroupCoordinator: Handle is terminating in state DOWN: 1 refcnts (0x105051da0), 0 toppar(s), 0 active toppar(s), 0 outbufs, 0 waitresps, 0 retrybufs: failed 0 request(s) in retry+outbuf
+{ severity: 7, fac: 'FAIL' } [thrd:GroupCoordinator]: GroupCoordinator: Broker handle is terminating (after 0ms in state DOWN) (_DESTROY)
+{ severity: 7, fac: 'BUFQ' } [thrd:GroupCoordinator]: GroupCoordinator: Purging bufq with 0 buffers
+{ severity: 7, fac: 'BUFQ' } [thrd:GroupCoordinator]: GroupCoordinator: Purging bufq with 0 buffers
+{ severity: 7, fac: 'BUFQ' } [thrd:GroupCoordinator]: GroupCoordinator: Updating 0 buffers on connection reset
+{ severity: 7, fac: 'TERM' } [thrd::0/internal]: :0/internal: Received TERMINATE op in state INIT: 2 refcnts, 0 toppar(s), 0 active toppar(s), 0 outbufs, 0 waitresps, 0 retrybufs
+{ severity: 7, fac: 'FAIL' } [thrd::0/internal]: :0/internal: Client is terminating (after 3064ms in state INIT) (_DESTROY)
+{ severity: 7, fac: 'STATE' } [thrd::0/internal]: :0/internal: Broker changed state INIT -> DOWN
+{ severity: 7, fac: 'BROADCAST' } [thrd::0/internal]: Broadcasting state change
+{ severity: 7, fac: 'BUFQ' } [thrd::0/internal]: :0/internal: Purging bufq with 0 buffers
+{ severity: 7, fac: 'BUFQ' } [thrd::0/internal]: :0/internal: Purging bufq with 0 buffers
+{ severity: 7, fac: 'BUFQ' } [thrd::0/internal]: :0/internal: Updating 0 buffers on connection reset
+{ severity: 7, fac: 'BRKTERM' } [thrd::0/internal]: :0/internal: terminating: broker still has 2 refcnt(s), 0 buffer(s), 0 partition(s)
+{ severity: 7, fac: 'TERMINATE' } [thrd::0/internal]: :0/internal: Handle is terminating in state DOWN: 1 refcnts (0x105052ba0), 0 toppar(s), 0 active toppar(s), 0 outbufs, 0 waitresps, 0 retrybufs: failed 0 request(s) in retry+outbuf
+{ severity: 7, fac: 'FAIL' } [thrd::0/internal]: :0/internal: Broker handle is terminating (after 0ms in state DOWN) (_DESTROY)
+{ severity: 7, fac: 'BUFQ' } [thrd::0/internal]: :0/internal: Purging bufq with 0 buffers
+{ severity: 7, fac: 'BUFQ' } [thrd::0/internal]: :0/internal: Purging bufq with 0 buffers
+{ severity: 7, fac: 'BUFQ' } [thrd::0/internal]: :0/internal: Updating 0 buffers on connection reset
+{ severity: 7, fac: 'TERMINATE' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Handle is terminating in state INIT: 2 refcnts (0x1048617a0), 0 toppar(s), 0 active toppar(s), 0 outbufs, 0 waitresps, 0 retrybufs: failed 0 request(s) in retry+outbuf
+{ severity: 7, fac: 'TERMINATE' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Handle is terminating in state INIT: 2 refcnts (0x1048617a0), 0 toppar(s), 0 active toppar(s), 0 outbufs, 0 waitresps, 0 retrybufs: failed 0 request(s) in retry+outbuf
+{ severity: 7, fac: 'TERMINATE' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Handle is terminating in state INIT: 2 refcnts (0x1048617a0), 0 toppar(s), 0 active toppar(s), 0 outbufs, 0 waitresps, 0 retrybufs: failed 0 request(s) in retry+outbuf
+{ severity: 7, fac: 'TERMINATE' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Handle is terminating in state INIT: 2 refcnts (0x1048617a0), 0 toppar(s), 0 active toppar(s), 0 outbufs, 0 waitresps, 0 retrybufs: failed 0 request(s) in retry+outbuf
+{ severity: 7, fac: 'TERMINATE' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Handle is terminating in state INIT: 2 refcnts (0x1048617a0), 0 toppar(s), 0 active toppar(s), 0 outbufs, 0 waitresps, 0 retrybufs: failed 0 request(s) in retry+outbuf
+{ severity: 7, fac: 'TERMINATE' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Handle is terminating in state INIT: 2 refcnts (0x1048617a0), 0 toppar(s), 0 active toppar(s), 0 outbufs, 0 waitresps, 0 retrybufs: failed 0 request(s) in retry+outbuf
+{ severity: 7, fac: 'TERMINATE' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Handle is terminating in state INIT: 2 refcnts (0x1048617a0), 0 toppar(s), 0 active toppar(s), 0 outbufs, 0 waitresps, 0 retrybufs: failed 0 request(s) in retry+outbuf
+{ severity: 7, fac: 'TERMINATE' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Handle is terminating in state INIT: 2 refcnts (0x1048617a0), 0 toppar(s), 0 active toppar(s), 0 outbufs, 0 waitresps, 0 retrybufs: failed 0 request(s) in retry+outbuf
+{ severity: 7, fac: 'TERMINATE' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Handle is terminating in state INIT: 2 refcnts (0x1048617a0), 0 toppar(s), 0 active toppar(s), 0 outbufs, 0 waitresps, 0 retrybufs: failed 0 request(s) in retry+outbuf
+{ severity: 7, fac: 'TERMINATE' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Handle is terminating in state INIT: 2 refcnts (0x1048617a0), 0 toppar(s), 0 active toppar(s), 0 outbufs, 0 waitresps, 0 retrybufs: failed 0 request(s) in retry+outbuf
+{ severity: 7, fac: 'TERMINATE' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Handle is terminating in state INIT: 2 refcnts (0x1048617a0), 0 toppar(s), 0 active toppar(s), 0 outbufs, 0 waitresps, 0 retrybufs: failed 0 request(s) in retry+outbuf
+{ severity: 7, fac: 'TERMINATE' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Handle is terminating in state INIT: 2 refcnts (0x1048617a0), 0 toppar(s), 0 active toppar(s), 0 outbufs, 0 waitresps, 0 retrybufs: failed 0 request(s) in retry+outbuf
+{ severity: 7, fac: 'TERMINATE' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Handle is terminating in state INIT: 2 refcnts (0x1048617a0), 0 toppar(s), 0 active toppar(s), 0 outbufs, 0 waitresps, 0 retrybufs: failed 0 request(s) in retry+outbuf
+{ severity: 7, fac: 'TERMINATE' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Handle is terminating in state INIT: 2 refcnts (0x1048617a0), 0 toppar(s), 0 active toppar(s), 0 outbufs, 0 waitresps, 0 retrybufs: failed 0 request(s) in retry+outbuf
+{ severity: 7, fac: 'TERMINATE' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Handle is terminating in state INIT: 2 refcnts (0x1048617a0), 0 toppar(s), 0 active toppar(s), 0 outbufs, 0 waitresps, 0 retrybufs: failed 0 request(s) in retry+outbuf
+{ severity: 7, fac: 'TERMINATE' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Handle is terminating in state INIT: 2 refcnts (0x1048617a0), 0 toppar(s), 0 active toppar(s), 0 outbufs, 0 waitresps, 0 retrybufs: failed 0 request(s) in retry+outbuf
+{ severity: 7, fac: 'TERMINATE' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Handle is terminating in state INIT: 2 refcnts (0x1048617a0), 0 toppar(s), 0 active toppar(s), 0 outbufs, 0 waitresps, 0 retrybufs: failed 0 request(s) in retry+outbuf
+{ severity: 7, fac: 'TERMINATE' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Handle is terminating in state INIT: 2 refcnts (0x1048617a0), 0 toppar(s), 0 active toppar(s), 0 outbufs, 0 waitresps, 0 retrybufs: failed 0 request(s) in retry+outbuf
+{ severity: 7, fac: 'TERMINATE' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Handle is terminating in state INIT: 2 refcnts (0x1048617a0), 0 toppar(s), 0 active toppar(s), 0 outbufs, 0 waitresps, 0 retrybufs: failed 0 request(s) in retry+outbuf
+{ severity: 7, fac: 'TERMINATE' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Handle is terminating in state INIT: 2 refcnts (0x1048617a0), 0 toppar(s), 0 active toppar(s), 0 outbufs, 0 waitresps, 0 retrybufs: failed 0 request(s) in retry+outbuf
+{ severity: 7, fac: 'TERMINATE' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Handle is terminating in state INIT: 2 refcnts (0x1048617a0), 0 toppar(s), 0 active toppar(s), 0 outbufs, 0 waitresps, 0 retrybufs: failed 0 request(s) in retry+outbuf
+{ severity: 7, fac: 'TERMINATE' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Handle is terminating in state INIT: 2 refcnts (0x1048617a0), 0 toppar(s), 0 active toppar(s), 0 outbufs, 0 waitresps, 0 retrybufs: failed 0 request(s) in retry+outbuf
+{ severity: 7, fac: 'TERMINATE' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Handle is terminating in state INIT: 2 refcnts (0x1048617a0), 0 toppar(s), 0 active toppar(s), 0 outbufs, 0 waitresps, 0 retrybufs: failed 0 request(s) in retry+outbuf
+{ severity: 7, fac: 'TERMINATE' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Handle is terminating in state INIT: 2 refcnts (0x1048617a0), 0 toppar(s), 0 active toppar(s), 0 outbufs, 0 waitresps, 0 retrybufs: failed 0 request(s) in retry+outbuf
+{ severity: 7, fac: 'TERMINATE' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Handle is terminating in state INIT: 2 refcnts (0x1048617a0), 0 toppar(s), 0 active toppar(s), 0 outbufs, 0 waitresps, 0 retrybufs: failed 0 request(s) in retry+outbuf
+{ severity: 7, fac: 'TERMINATE' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Handle is terminating in state INIT: 2 refcnts (0x1048617a0), 0 toppar(s), 0 active toppar(s), 0 outbufs, 0 waitresps, 0 retrybufs: failed 0 request(s) in retry+outbuf
+{ severity: 7, fac: 'TERMINATE' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Handle is terminating in state INIT: 2 refcnts (0x1048617a0), 0 toppar(s), 0 active toppar(s), 0 outbufs, 0 waitresps, 0 retrybufs: failed 0 request(s) in retry+outbuf
+{ severity: 7, fac: 'TERMINATE' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Handle is terminating in state INIT: 2 refcnts (0x1048617a0), 0 toppar(s), 0 active toppar(s), 0 outbufs, 0 waitresps, 0 retrybufs: failed 0 request(s) in retry+outbuf
+{ severity: 7, fac: 'TERMINATE' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Handle is terminating in state INIT: 2 refcnts (0x1048617a0), 0 toppar(s), 0 active toppar(s), 0 outbufs, 0 waitresps, 0 retrybufs: failed 0 request(s) in retry+outbuf
+{ severity: 7, fac: 'TERMINATE' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Handle is terminating in state INIT: 2 refcnts (0x1048617a0), 0 toppar(s), 0 active toppar(s), 0 outbufs, 0 waitresps, 0 retrybufs: failed 0 request(s) in retry+outbuf
+{ severity: 7, fac: 'TERMINATE' } [thrd:localhost:9092/bootstrap]: localhost:9092/1: Handle is terminating in state INIT: 2 refcnts (0x1048617a0), 0 toppar(s), 0 active toppar(s), 0 outbufs, 0 waitresps, 0 retrybufs: failed 0 request(s) in retry+outbuf

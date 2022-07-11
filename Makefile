@@ -29,10 +29,10 @@ JSLINT_FILES = lib/*.js test/*.js e2e/*.js
 PACKAGE = $(shell node -pe 'require("./package.json").name.split("/")[1]')
 VERSION = $(shell node -pe 'require("./package.json").version')
 
-GYPBUILDARGS=
-ifeq ($(BUILDTYPE),Debug)
+# GYPBUILDARGS=
+# ifeq ($(BUILDTYPE),Debug)
 GYPBUILDARGS=--debug
-endif
+# endif
 
 .PHONY: all clean lint test lib docs e2e ghpages check
 
@@ -54,7 +54,7 @@ node_modules/.dirstamp: package.json
 	@touch $@
 
 $(CONFIG_OUTPUTS): node_modules/.dirstamp binding.gyp
-	@$(NODE-GYP) configure
+	@$(NODE-GYP) configure --debug
 
 test: node_modules/.dirstamp
 	@./node_modules/.bin/mocha $(TEST_REPORTER) $(TESTS) $(TEST_OUTPUT)

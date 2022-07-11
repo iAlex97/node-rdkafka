@@ -83,10 +83,6 @@ bool Connection::IsClosing() {
   return m_client != NULL && m_is_closing;
 }
 
-RdKafka::Handle* Connection::GetClient() {
-  return m_client;
-}
-
 Baton Connection::CreateTopic(std::string topic_name) {
   return CreateTopic(topic_name, NULL);
 }

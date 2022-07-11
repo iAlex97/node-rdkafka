@@ -56,8 +56,6 @@ class Connection : public Nan::ObjectWrap {
   Baton QueryWatermarkOffsets(std::string, int32_t, int64_t*, int64_t*, int);
   Baton OffsetsForTimes(std::vector<RdKafka::TopicPartition*> &, int);
 
-  RdKafka::Handle* GetClient();
-
   static RdKafka::TopicPartition* GetPartition(std::string &);
   static RdKafka::TopicPartition* GetPartition(std::string &, int);
 
