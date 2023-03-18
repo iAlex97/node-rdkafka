@@ -207,6 +207,8 @@ Steps to update:
     git checkout 063a9ae7a65cebdf1cc128da9815c05f91a2a996 # for version 1.8.2
     ```
 
+    If you get an error during that checkout command, double check that the submodule was initialized / cloned! You may need to run `git submodule update --init --recursive`
+
 1. Update [`config.d.ts`](https://github.com/Blizzard/node-rdkafka/blob/master/config.d.ts) and [`errors.d.ts`](https://github.com/Blizzard/node-rdkafka/blob/master/errors.d.ts) TypeScript definitions by running:
     ```bash
     node ci/librdkafka-defs-generator.js
@@ -220,3 +222,9 @@ Steps to update:
 1. Run end to end tests: `npm run test:e2e`. This requires running kafka & zookeeper locally.
 
 1. Update the version numbers referenced in the [`README.md`](https://github.com/Blizzard/node-rdkafka/blob/master/README.md) file to the new version.
+
+## Publishing new npm version
+
+1. Increment the `version` in `package.json` and merge that change in.
+
+1. Create a new github release. Set the tag & release title to the same string as `version` in `package.json`.
