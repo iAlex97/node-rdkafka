@@ -601,7 +601,7 @@ void KafkaConsumer::Init(v8::Local<v8::Object> exports) {
   Nan::SetPrototypeMethod(tpl, "incrementalAssign", NodeIncrementalAssign);
   Nan::SetPrototypeMethod(tpl, "unassign", NodeUnassign);
   Nan::SetPrototypeMethod(tpl, "incrementalUnassign", NodeIncrementalUnassign);
-  Nan::SetPrototypeMethod(tpl, "assignments", NodeAssignment);
+  Nan::SetPrototypeMethod(tpl, "assignments", NodeAssignments);
   Nan::SetPrototypeMethod(tpl, "assignmentLost", NodeAssignmentLost);
 
   Nan::SetPrototypeMethod(tpl, "commit", NodeCommit);
